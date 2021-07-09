@@ -1,0 +1,25 @@
+<?php
+Session_start();
+$_SESSION['rater']=0;
+for($i=0;$i<20;$i++)
+		{
+			$_SESSION['tirer'][$i]='_';
+		}
+$tableau[0]='EMAIL';
+$tableau[1]='FACEBOOK';
+$tableau[2]='SNAPCHAT';
+$tableau[3]='INTERNET';
+$tableau[4]='GOOGLE';
+$tableau[5]='FIREFOX';
+$tableau[6]='BING';
+$tableau[7]='TWITTER';
+$tableau[8]='AMAZON';
+$tableau[9]='YOUTUBE';
+$tableau[10]='NETFLIX';
+$tableau[11]='MESSENGER';
+$tableau[12]='INSTAGRAM';
+$num=rand(0,12);
+$_SESSION['mot']=$tableau[$num];
+$_SESSION['nb_tirer']=strlen($tableau[$num]);
+header('Location:pendu0.php');
+?>
